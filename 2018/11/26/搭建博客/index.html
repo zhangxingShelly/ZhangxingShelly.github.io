@@ -4,14 +4,14 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
   
-    <title>这是我的第一篇博客 | Shelly&#39;s Blog</title>
+    <title>搭建个人博客的过程笔记（基于Hexo和Github） | Shelly&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Shelly">
     
-    <meta name="description" content="第一次尝试,使用hexo和github page搭建自己的博客。 
-快速入门创建新博客1$ hexo new &#34;My New Post&#34;
-更多信息: Writing">
+    <meta name="description" content="&amp;emsp;&amp;emsp;之前周围有几个朋友给我看了他们搭建的个人博客，也建议我有机会可以自己搭建一个。看着感觉很好玩，想着有时间一定要自己试试。现在总算是开始了这个尝试。我是一个容易忘事的人，简单记录一下过程。之后万一有需要，也方便复现，哈哈。
+一、电脑环境搭建
+安装Node.js：为Hexo提供j">
     
     
     
@@ -69,15 +69,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2018/11/24/hello-world/" title="这是我的第一篇博客" itemprop="url">这是我的第一篇博客</a>
+      <a href="/2018/11/26/搭建博客/" title="搭建个人博客的过程笔记（基于Hexo和Github）" itemprop="url">搭建个人博客的过程笔记（基于Hexo和Github）</a>
   </h1>
   <p class="article-author">By
     
       <a href="https://zhangxingShelly.github.io" title="Shelly">Shelly</a>
     </p>
   <p class="article-time">
-    <time datetime="2018-11-24T10:32:32.983Z" itemprop="datePublished">2018-11-24</time>
-    更新日期:<time datetime="2018-11-26T15:56:48.942Z" itemprop="dateModified">2018-11-26</time>
+    <time datetime="2018-11-26T15:47:01.000Z" itemprop="datePublished">2018-11-26</time>
+    更新日期:<time datetime="2018-11-27T14:49:13.580Z" itemprop="dateModified">2018-11-27</time>
     
   </p>
 </header>
@@ -86,19 +86,29 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#快速入门"><span class="toc-number">1.</span> <span class="toc-text">快速入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建新博客"><span class="toc-number">1.1.</span> <span class="toc-text">创建新博客</span></a></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、电脑环境搭建"><span class="toc-number">1.</span> <span class="toc-text">一、电脑环境搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、使用Hexo创建静态博客"><span class="toc-number">2.</span> <span class="toc-text">二、使用Hexo创建静态博客</span></a></li></ol>
 		</div>
 		
-		<p>第一次尝试,使用<a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a>和github page搭建自己的<a href="https://zhangxingshelly.github.io">博客</a>。 </p>
-<h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><h3 id="创建新博客"><a href="#创建新博客" class="headerlink" title="创建新博客"></a>创建新博客</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>更多信息: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+		<p>&emsp;&emsp;之前周围有几个朋友给我看了他们搭建的个人博客，也建议我有机会可以自己搭建一个。看着感觉很好玩，想着有时间一定要自己试试。现在总算是开始了这个尝试。我是一个容易忘事的人，简单记录一下过程。之后万一有需要，也方便复现，哈哈。</p>
+<h1 id="一、电脑环境搭建"><a href="#一、电脑环境搭建" class="headerlink" title="一、电脑环境搭建"></a>一、电脑环境搭建</h1><ol>
+<li>安装Node.js：为Hexo提供js脚本的运行环境。</li>
+<li>安装Yarn：Yarn是JavaScript的包管理工具。</li>
+<li>安装Git。</li>
+<li>安装Hexo：通过Yarn来全局安装Hexo</li>
+</ol>
+<p>&emsp;&emsp;具体安装步骤参考<a href="https://blog.csdn.net/gsl9d1p04f6x2ts3c9/article/details/81024330" target="_blank" rel="noopener">博客</a>。</p>
+<h1 id="二、使用Hexo创建静态博客"><a href="#二、使用Hexo创建静态博客" class="headerlink" title="二、使用Hexo创建静态博客"></a>二、使用Hexo创建静态博客</h1><ol>
+<li>创建站点目录：选择一个目录作为Hexo站点目录,之后主题配置文件，创建博文的md文件都在存储在本目录下。我选择在E盘新建一个MyBlog目录,作为Hexo站点目录。</li>
+<li>初始化Hexo：运行cmd,cd 到站点目录,输入命令：hexo init。</li>
+<li>更换博客主题：初始化Hexo之后，在你创建的站点目录下会出现themes文件夹，文件下有landscape文件夹，内含Hexo自带的博客主题风格配置文件。我们可选择自己喜欢的博客主题风格进行更换。<br>主题汇总：可在<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">Github</a>上查看各种主题，进行选择。<br>本博客使用的主题为<a href="https://github.com/A-limon/pacman" target="_blank" rel="noopener">Pacman</a>提供。<br>在cmd中使用如下命令将新的主题配置文件复制到themes文件夹下<br>&lt; git clone <a href="https://github.xom/A-limon/pacman.git" target="_blank" rel="noopener">https://github.xom/A-limon/pacman.git</a> themes/pacman<br><img src="/2018/11/26/搭建博客/复制新博客主题.jpg" alt="Clone新博客主题" title="Clone新博客主题"></li>
+</ol>
   
 	</div>
 		<footer class="article-footer clearfix">
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Hexo/">Hexo</a>
+  <span></span> <a href="/tags/技术记录/">技术记录</a>
   </div>
 
 
@@ -106,7 +116,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="https://zhangxingShelly.github.io/2018/11/24/hello-world/" data-title="这是我的第一篇博客 | Shelly&#39;s Blog" data-tsina="" class="share clearfix">
+  <div data-url="https://zhangxingShelly.github.io/2018/11/26/搭建博客/" data-title="搭建个人博客的过程笔记（基于Hexo和Github） | Shelly&#39;s Blog" data-tsina="" class="share clearfix">
   </div>
 
 </div>
@@ -115,14 +125,14 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev">
- <a href="/2018/11/26/搭建博客/" title="搭建个人博客的过程笔记（基于Hexo和Github）">
-  <strong>PREVIOUS:</strong><br>
-  <span>
-  搭建个人博客的过程笔记（基于Hexo和Github）</span>
+
+<div class="next">
+<a href="/2018/11/24/hello-world/" title="这是我的第一篇博客">
+ <strong>NEXT:</strong><br> 
+ <span>这是我的第一篇博客
+</span>
 </a>
 </div>
-
 
 </nav>
 
@@ -132,7 +142,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#快速入门"><span class="toc-number">1.</span> <span class="toc-text">快速入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建新博客"><span class="toc-number">1.1.</span> <span class="toc-text">创建新博客</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、电脑环境搭建"><span class="toc-number">1.</span> <span class="toc-text">一、电脑环境搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、使用Hexo创建静态博客"><span class="toc-number">2.</span> <span class="toc-text">二、使用Hexo创建静态博客</span></a></li></ol>
   </div>
 
 <div id="asidepart">
