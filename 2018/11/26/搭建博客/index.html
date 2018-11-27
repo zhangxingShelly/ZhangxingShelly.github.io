@@ -77,7 +77,7 @@
     </p>
   <p class="article-time">
     <time datetime="2018-11-26T15:47:01.000Z" itemprop="datePublished">2018-11-26</time>
-    更新日期:<time datetime="2018-11-27T14:49:13.580Z" itemprop="dateModified">2018-11-27</time>
+    更新日期:<time datetime="2018-11-27T15:23:46.596Z" itemprop="dateModified">2018-11-27</time>
     
   </p>
 </header>
@@ -86,7 +86,7 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、电脑环境搭建"><span class="toc-number">1.</span> <span class="toc-text">一、电脑环境搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、使用Hexo创建静态博客"><span class="toc-number">2.</span> <span class="toc-text">二、使用Hexo创建静态博客</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、电脑环境搭建"><span class="toc-number">1.</span> <span class="toc-text">一、电脑环境搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、使用Hexo创建静态博客"><span class="toc-number">2.</span> <span class="toc-text">二、使用Hexo创建静态博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、部署到Github"><span class="toc-number">3.</span> <span class="toc-text">三、部署到Github</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、修改博客主题"><span class="toc-number">4.</span> <span class="toc-text">四、修改博客主题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、创建自己的博文"><span class="toc-number">5.</span> <span class="toc-text">五、创建自己的博文</span></a></li></ol>
 		</div>
 		
 		<p>&emsp;&emsp;之前周围有几个朋友给我看了他们搭建的个人博客，也建议我有机会可以自己搭建一个。看着感觉很好玩，想着有时间一定要自己试试。现在总算是开始了这个尝试。我是一个容易忘事的人，简单记录一下过程。之后万一有需要，也方便复现，哈哈。</p>
@@ -98,11 +98,26 @@
 </ol>
 <p>&emsp;&emsp;具体安装步骤参考<a href="https://blog.csdn.net/gsl9d1p04f6x2ts3c9/article/details/81024330" target="_blank" rel="noopener">博客</a>。</p>
 <h1 id="二、使用Hexo创建静态博客"><a href="#二、使用Hexo创建静态博客" class="headerlink" title="二、使用Hexo创建静态博客"></a>二、使用Hexo创建静态博客</h1><ol>
-<li>创建站点目录：选择一个目录作为Hexo站点目录,之后主题配置文件，创建博文的md文件都在存储在本目录下。我选择在E盘新建一个MyBlog目录,作为Hexo站点目录。</li>
+<li>创建站点目录：选择一个目录作为Hexo站点目录，之后主题配置文件、创建博文的md文件都存储在本目录下。我选择在E盘新建一个MyBlog目录，作为Hexo站点目录。</li>
 <li>初始化Hexo：运行cmd,cd 到站点目录,输入命令：hexo init。</li>
-<li>更换博客主题：初始化Hexo之后，在你创建的站点目录下会出现themes文件夹，文件下有landscape文件夹，内含Hexo自带的博客主题风格配置文件。我们可选择自己喜欢的博客主题风格进行更换。<br>主题汇总：可在<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">Github</a>上查看各种主题，进行选择。<br>本博客使用的主题为<a href="https://github.com/A-limon/pacman" target="_blank" rel="noopener">Pacman</a>提供。<br>在cmd中使用如下命令将新的主题配置文件复制到themes文件夹下<br>&lt; git clone <a href="https://github.xom/A-limon/pacman.git" target="_blank" rel="noopener">https://github.xom/A-limon/pacman.git</a> themes/pacman<br><img src="/2018/11/26/搭建博客/复制新博客主题.jpg" alt="Clone新博客主题" title="Clone新博客主题"></li>
+<li>更换博客主题：初始化Hexo之后，在你创建的站点目录下会出现名为themes的文件夹，文件下有名为landscape的文件夹，内含Hexo自带的博客主题风格配置文件。我们可选择自己喜欢的博客主题风格进行更换。<br>主题汇总：可在<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">Github</a>上查看各种主题，进行选择。<br>本博客使用的主题为<a href="https://github.com/A-limon/pacman" target="_blank" rel="noopener">Pacman</a>提供。<br>在cmd中使用如下命令将新的主题配置文件复制到themes文件夹下<blockquote>
+<p>‘ git clone <a href="https://github.xom/A-limon/pacman.git" target="_blank" rel="noopener">https://github.xom/A-limon/pacman.git</a> themes/pacman ‘<br><img src="/2018/11/26/搭建博客/复制新博客主题.jpg" alt="Clone新博客主题" title="Clone新博客主题"><br>然后打开站点目录下的配置文件_config.yml，打开它(可使用Notepad++打开)。在文件中找到themes:landscape，将其改为themes:pacman<br><img src="/2018/11/26/搭建博客/在配置文件中指定主题.jpg" alt="在配置文件中指定主题" title="指定主题"><br>执行hexo clean 和 hexo g 以及 hexo s 生成静态博客，可以在本地浏览器中输入url:localhost:4000查看生成效果。<br><img src="/2018/11/26/搭建博客/生成静态博客.jpg" alt="生成静态博客" title="生成静态博客"></p>
+</blockquote>
+</li>
 </ol>
-  
+<h1 id="三、部署到Github"><a href="#三、部署到Github" class="headerlink" title="三、部署到Github"></a>三、部署到Github</h1><ol>
+<li>注册Github，获取Github Pages，步骤可<a href="https://www.cnblogs.com/sun-haiyu/p/7027093.html" target="_blank" rel="noopener">自行百度</a></li>
+<li>安装插件：在cmd中cd到站点目录，然后使用yarn安装插件<blockquote>
+<p>Yarn add hexo-deployer-git<br>如果使用的是包管理器npm进行安装，则使用的命令是：<br>npm install hexo-deployer-git –save<br>然后配置 Hexo根目录的 _config.yml, 在文件中增加如下代码:<br>‘’’<br>deploy:<br>type: git<br>repo: https:// github.com/your_username/your_username.github.io.git<br>branch: master<br>‘’’<br>如果你是第一次配置 Github 远程仓库，你还须将你电脑的SSH Key 配置到 Github 上: </p>
+</blockquote>
+</li>
+<li>打开 git bash ，输入 ssh-keygen -t rsa -C “你的github注册邮箱”，连续三个回车，生成密钥，最后得到了两个文件：id_rsa和id_rsa.pub（默认存储路径是：C:\Users\Administrator.ssh）。 </li>
+<li><p>登录Github，点击头像下的settings，点击 SSH and GPG keys ，点击 New SSH key，将id_rsa.pub文件里的内容复制上去。title可以随意填或不填。点击add key按钮，在弹出的对话框输入Github账号的密码即可。</p>
+</li>
+<li><p>部署到Github：执行hexo g 然后执行hexo deploy，在弹出的对话框中输入github账号和密码即可。部署成功后在浏览器输入网址：your_username.github.io就可以查看你创建的博客啦。</p>
+</li>
+</ol>
+<h1 id="四、修改博客主题"><a href="#四、修改博客主题" class="headerlink" title="四、修改博客主题"></a>四、修改博客主题</h1><h1 id="五、创建自己的博文"><a href="#五、创建自己的博文" class="headerlink" title="五、创建自己的博文"></a>五、创建自己的博文</h1>  
 	</div>
 		<footer class="article-footer clearfix">
 
@@ -142,7 +157,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、电脑环境搭建"><span class="toc-number">1.</span> <span class="toc-text">一、电脑环境搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、使用Hexo创建静态博客"><span class="toc-number">2.</span> <span class="toc-text">二、使用Hexo创建静态博客</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、电脑环境搭建"><span class="toc-number">1.</span> <span class="toc-text">一、电脑环境搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、使用Hexo创建静态博客"><span class="toc-number">2.</span> <span class="toc-text">二、使用Hexo创建静态博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、部署到Github"><span class="toc-number">3.</span> <span class="toc-text">三、部署到Github</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、修改博客主题"><span class="toc-number">4.</span> <span class="toc-text">四、修改博客主题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、创建自己的博文"><span class="toc-number">5.</span> <span class="toc-text">五、创建自己的博文</span></a></li></ol>
   </div>
 
 <div id="asidepart">
